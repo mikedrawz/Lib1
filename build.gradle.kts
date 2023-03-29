@@ -15,6 +15,7 @@ version = project.property("version")!!
 repositories {
     mavenLocal()
     mavenCentral()
+	google()
 }
 
 kotlin {
@@ -50,5 +51,17 @@ kotlin {
 		val jvmTest by getting
 		val androidMain by getting
 		val androidTest by getting
+	}
+}
+
+// *************************************************************************************************************
+// Android configuration
+// *************************************************************************************************************
+android {
+	namespace = "com.example.mdrawz"
+	compileSdk = 32
+	defaultConfig {
+		minSdk = 21
+		targetSdk = 32
 	}
 }
